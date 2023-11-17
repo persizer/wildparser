@@ -5,6 +5,7 @@ Scraper for wildberries. Scrape your way to victory!
 
 - [About](#about)
 - [Getting Started](#getting-started)
+- [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Usage](#usage)
 
@@ -15,6 +16,11 @@ Scrapes based on category
 ## Getting Started
 
 These instructions will help you get a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+You need to have MySql database installed.
+Good Windows package for that would be [XAMPP](https://www.apachefriends.org)
 
 ### Installation
 
