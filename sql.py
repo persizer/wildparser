@@ -1,8 +1,19 @@
+import os
+from dotenv import load_dotenv
 from mysql.connector import connect
+# Load environment variables from .env file
+load_dotenv()
 
-
+def get_database_connection():
+    return mysql.connector.connect(
+        host=os.getenv("DB_HOST"),
+        user=os.getenv("DB_USER"),
+        password=os.getenv("DB_PASSWORD"),
+        database=os.getenv("DB_NAME")
+    )
+    
 def create_database_table():
-    connection = connect(host="localhost", user="root", password="rE*=|||123", database="wildbase")
+    connection = get_database_connection()
     cursor = connection.cursor()
     cursor.execute("CREATE DATABASE IF NOT EXISTS wildbase")
     cursor.execute("""
@@ -19,7 +30,7 @@ def create_database_table():
 
 
 def insert_data_into_table(category, amount, avg_price, search_count):
-    connection = connect(host="localhost", user="root", password="rE*=|||123", database="wildbase")
+    connection = get_database_connection()
     cursor = connection.cursor()
     amount = 0 if amount == "" else amount
     search_count = 0 if search_count == "" else search_count
