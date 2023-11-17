@@ -19,7 +19,9 @@ These instructions will help you get a copy of the project up and running on you
 
 ### Prerequisites
 
-You need to have MySql database installed.
+- Python 3.10
+- MySql database
+  
 Good Windows package for that would be [XAMPP](https://www.apachefriends.org)
 
 ### Installation
