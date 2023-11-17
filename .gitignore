@@ -1,0 +1,44 @@
+# Ignore compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environment
+venv/
+
+# Ignore logs and other generated files
+*.log
+*.db
+*.sqlite
+
+# Ignore system-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore user-specific files
+*.sublime-workspace
+*.sublime-project
+
+# Ignore database configurations
+dbconfig.py
+
+# Ignore generated directories
+__generated__/
+
+# Ignore environment configuration files
+.env
+
+# Ignore IDE-specific files
+.idea/
+
+# Ignore compiled files
+*.class
+*.jar
+
+# Ignore pipenv and pipenv.lock
+Pipfile
+Pipfile.lock
+
+# Ignore vscode settings
+.vscode/
