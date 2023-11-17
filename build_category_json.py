@@ -1,16 +1,30 @@
 import json
 
 
-category_file = open('categories.json', encoding='utf-8')
-acceptable_categories = ['Электроника', 'Ноутбуки и компьютеры', 'Смартфоны и аксессуары', 'Бытовая техника']
-category_json = [item for item in json.load(category_file)['data'] if item['parentName'] in acceptable_categories]
+category_file = open('c.json', 'r+', encoding='utf-8')
+category_json = [item for item in json.load(category_file)['data']]
+output_category_list = []
+output_file = open('categories.json', 'w', encoding='utf-8')
 
 
+for item in category_json:
+    item.pop('isVisible', None)
+    item['main_category'] = item.pop('parentName')
+    item['sub_category'] = item.pop('objectName')
+
+    if ('для взрослых' in item['main_category']
+            or 'для взрослых' in item['sub_category']
+            or '18+' in item['sub_category']):
+        del item
+        continue
+    output_category_list.append(item)
+    
+    
 data = {
-    "data": category_json,
-    "error": False,
-    "errorText": "",
-    "additionalErrors": None
+    "data": output_category_list,
 }
-with open('chosen_categories.json', 'w', encoding='utf-8') as json_file:
-    json.dump(data, json_file, ensure_ascii=False, indent=4)
+
+
+json.dump(data, output_file, ensure_ascii=False, indent=4)
+category_file.close()
+output_file.close()

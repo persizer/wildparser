@@ -10,19 +10,21 @@ def create_database_table():
             id INT AUTO_INCREMENT PRIMARY KEY,
             category VARCHAR(255),
             amount INT,
-            avg_price INT
+            avg_price INT,
+            search_count INT
         )
     """)
     cursor.execute("TRUNCATE TABLE wildbase.parsertable")
     connection.commit()
 
 
-def insert_data_into_table(category, amount, avg_price):
+def insert_data_into_table(category, amount, avg_price, search_count):
     connection = connect(host="localhost", user="root", password="rE*=|||123", database="wildbase")
     cursor = connection.cursor()
     amount = 0 if amount == "" else amount
-    query = "INSERT INTO wildbase.parsertable(category, amount, avg_price) VALUES (%s, %s, %s)"
-    cursor.execute(query, (category, amount, avg_price))
+    search_count = 0 if search_count == "" else search_count
+    query = "INSERT INTO wildbase.parsertable(category, amount, avg_price, search_count) VALUES (%s, %s, %s, %s)"
+    cursor.execute(query, (category, amount, avg_price, search_count))
     connection.commit()
 
 
