@@ -18,8 +18,7 @@ These instructions will help you get a copy of the project up and running on you
 
 ### Installation
 
-A step-by-step guide on how to install your project.
-
+A step-by-step guide:
 ```bash
 git clone https://github.com/persizer/wildparser.git
 cd wildparser
