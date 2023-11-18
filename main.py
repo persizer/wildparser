@@ -6,11 +6,14 @@ import sql
 MAX_THREADS = 50
 threads = 0
 
+#Get categories from nested json
 def get_categories():
-    with open("categories.json", encoding="UTF-8") as categories_file:
-        data = json.load(categories_file)["data"]
-        sub_categories = [item["sub_category"] for item in data]
-        return sub_categories
+    with open("categories_struct.json", encoding="utf-8") as categories_file:
+        data = json.load(categories_file)
+
+        categories = [sub_category for subcategories in data.values() for sub_category in subcategories]
+        
+        return categories
 
 def find_reachable_categories():
     global category_list
