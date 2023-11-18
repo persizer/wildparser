@@ -20,7 +20,7 @@ def build_tree(data):
 def main():
     # Specify the input and output file paths
     input_json_file_path = 'categories.json'
-    output_json_file_path = 'categories1.json'
+    output_json_file_path = 'categories_struct.json'
 
     # Read the contents of the input JSON file
     with open(input_json_file_path, 'r', encoding='utf-8') as file:
