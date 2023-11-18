@@ -3,7 +3,7 @@ from dotenv import load_dotenv, find_dotenv
 from mysql.connector import connect
 
 # Load environment variables from .env file
-load_dotenv(find_dotenv(".env.sample"))
+load_dotenv()
 
 
 def get_database_connection():

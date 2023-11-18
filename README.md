@@ -7,6 +7,7 @@ Scraper for WildBerries. Scrape your way to victory!
 - [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
+- [Configuration](#configuration)
 - [Usage](#usage)
 
 ## About
@@ -32,6 +33,14 @@ git clone https://github.com/persizer/wildparser.git
 cd wildparser
 pip install -r requirements.txt
 ```
+### Configuration
+
+1. Rename `.env.sample` to `.env`
+2. Change environment variables: 
+   - `DB_HOST` to desired hostname
+   - `DB_USER` to desired username
+   - `DB_PASSWORD` to desired password
+   - `DB_NAME` to desired database name
 
 ### Usage
 
