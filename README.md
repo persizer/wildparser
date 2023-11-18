@@ -1,5 +1,5 @@
-# Wildberries scrapper
-Scraper for wildberries. Scrape your way to victory!
+# WildBerries scraper
+Scraper for WildBerries. Scrape your way to victory!
 
 ## Table of Contents
 
@@ -11,7 +11,7 @@ Scraper for wildberries. Scrape your way to victory!
 
 ## About
 
-Scrapes based on category
+Scrapes WildBerries product categories. Fetches the amount of products, search count and average price for the past week and inputs the data into a MySQL database.
 
 ## Getting Started
 
@@ -20,9 +20,9 @@ These instructions will help you get a copy of the project up and running on you
 ### Prerequisites
 
 - Python 3.10
-- MySql database
+- MySQL database
   
-Good Windows package for that would be [XAMPP](https://www.apachefriends.org)
+A good Windows package for that would be [XAMPP](https://www.apachefriends.org)
 
 ### Installation
 
