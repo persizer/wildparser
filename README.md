@@ -1,5 +1,5 @@
 # WildBerries scraper
-Scraper for WildBerries. Scrape your way to victory!
+A Python script designed to scrape data off of WildBerries, a Russian online marketplace.
 
 ## Table of Contents
 
